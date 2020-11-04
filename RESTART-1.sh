@@ -63,7 +63,7 @@ fi
 echo ${NORMAL}
 
 cd dg-isle
-cp sample.env .env
+cp MASTER.env .env
 
 echo ${STATUS}
 echo "Pulling Docker images and starting 7 containers... ${NORMAL}"
