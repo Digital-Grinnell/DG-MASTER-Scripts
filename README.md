@@ -46,7 +46,7 @@ drwx------  1 markmcfate  staff    16K Oct 20 10:45 .Spotlight-V100
 drwx------  1 markmcfate  staff    16K Oct 20 10:45 .TemporaryItems
 drwx------  1 markmcfate  staff    16K Oct 20 10:50 .Trashes
 drwx------  1 markmcfate  staff    16K Oct 20 10:51 .fseventsd
--rwx------  1 markmcfate  staff    90B Oct 21 14:51 DG-FEDORA-Master.md
+-rwx------  1 markmcfate  staff    90B Oct 21 14:51 DG-MASTER.md
 drwx------  1 markmcfate  staff    16K Oct 20 17:23 Extras
 -rwx------  1 markmcfate  staff   5.8K Oct 21 12:55 README.md
 -rwx------  1 markmcfate  staff   2.3K Oct 21 10:22 RESTART-1.sh
@@ -58,7 +58,7 @@ drwx------  1 markmcfate  staff    16K Mar 18  2020 datastreamStore
 drwx------  1 markmcfate  staff    16K Mar 17  2020 objectStore
 -rwx------  1 markmcfate  staff   1.0K Oct 20 20:17 reset-keychain-access.md
 ```
-
+<!--
 ### Updating DG-NAME from DG-MASTER
 A script is now provided to "pull" updates from the _master_ repository at `//Storage/LIBRARY/mcfatem/DG-MASTER` to your mounted USB stick using `rsync`. If your `DG-NAME` stick is properly mounted you should download https://gist.github.com/Digital-Grinnell/69c3cca524071098bbf5c865ec632164 and save the file to `/Volumes/DG-NAME/pull-from-master.sh`.  After fetching and saving the script, make it executable using `chmod +x /Volumes/DG-NAME/pull-from-master.sh`.
 
@@ -69,6 +69,7 @@ cd /Volumes/DG-NAME
 ./pull-from-master.sh
 ```
 Be patient and enjoy the show! The time it will take depends on many factors, **so it's a good idea to plan ahead and run this command overnight, if possible.**
+-->
 
 ## Not Using Mac OS X?
 If your workstation is not a Mac, you will need to insert the USB stick and take appropriate steps to:

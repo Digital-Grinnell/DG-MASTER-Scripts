@@ -1,14 +1,21 @@
 #!/bin/bash
-
 # This script will rsync the entire contents of /Volumes/DG-MASTER to //STORAGE/Library/mcfatem/DG-MASTER
+
+ERROR="\\033[31m"
+GOOD="\\033[32m"
+ATTENTION="\\033[35m"
+NORMAL="\\033[36m"
+STATUS="\\033[33m"
+BOLD="\\033[1m"
+echo "\\033[40m"
 
 VOLUME=`pwd`
 echo ${STATUS}
 echo "This USB stick has been identified as ${VOLUME}."
 echo ""
 
-# DEST=/Volumes/mcfatem/DG-MASTER
-DEST=/Volumes/mediadb/DG-MASTER
+DEST=/Volumes/mcfatem/DG-MASTER
+# DEST=/Volumes/mediadb/DG-MASTER    # alternate destination in the //STORAGE/MediaDB directory
 echo "Destination is ${DEST}"
 
 # check that destination folder ${DEST} has been mounted as /Volumes/mcfatem/DG-MASTER
@@ -32,10 +39,9 @@ echo ".log file is: ${LOG}"
 echo "Starting rsync now..."
 rsync -azrui \
   --exclude ".DS_Store" \
-  --exclude ".SpotlightV-100" \
+  --exclude ".Spotlight-V100" \
   --exclude ".Trashes" \
   --exclude ".TemporaryItems" \
-  --exclude ".git" \
   ${VOLUME}/. ${DEST}/. \
   --progress \
   --log-file=${DEST}/logs/${LOG}
