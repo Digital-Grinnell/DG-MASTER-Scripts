@@ -2,9 +2,14 @@
 
 _DG-FEDORA_ is the name of a USB stick/volume that I designed long ago to be a "portable" FEDORA repository intended for use with a local _ISLE_ stack. It holds a pre-configured and populated sample of FEDORA digital objects gleaned from [Digital.Grinnell](https://digital.grinnell.edu).  Using _DG-FEDORA_ you could easily add a pre-populated repository of objects to your "demo" or "local" environment _ISLE_ project in as little as 5 minutes.
 
-The canonical USB stick was renamed _DG-MASTER_ on 28-Oct-2020 and it now includes utility scripts for many purposes. One script, `clone-to-X.sh` has been used to create numerous copies of _DG-MASTER_ for distribution to multiple devices and colleagues.  Each copy is given a UNIQUE name to identify its owner or purpose.  For example, I have a personal copy named _DG-MARK1_.  The `DG-` prefix is REQUIRED, so do not change it!
+> The canonical USB stick was renamed _DG-MASTER_ on 28-Oct-2020 and it now includes utility scripts for many purposes. One script, `clone-to-X.sh` has been used to create numerous copies of _DG-MASTER_ for distribution to multiple devices and colleagues.  Each copy is given a UNIQUE name to identify its owner or purpose.  For example, I have a personal copy named _DG-MARK1_.  The `DG-` prefix is REQUIRED, so do not change it!
 
 In the remainder of this document mentions of `DG-NAME` can be assumed to mean "the DG-something stick in your possession".
+
+> **Note**: The script and document portions of the _DG-MASTER_ stick are controlled in a _private_ repository at [https://github.com/Digital-Grinnell/DG-MASTER-Scripts](https://github.com/Digital-Grinnell/DG-MASTER-Scripts).  NO data is held in this GitHub repository, only code and documentation.
+
+## Building https://dg.localdomain
+See [Compact Build of dg.localdomain - Concise Instructions](https://static.grinnell.edu/blogs/McFateM/posts/094-compact-build-of-dg.localdomain/) for the quick-and-easy steps required to launch a local [https://dg.localdomain](https://dg.localdomain) ISLE stack on your OS X (or Linux) workstation.
 
 ## Prerequisites
 To successfully use this USB stick your system will need to meet the following prerequisite requirements.
@@ -65,10 +70,7 @@ cd /Volumes/DG-NAME
 ```
 Be patient and enjoy the show! The time it will take depends on many factors, **so it's a good idea to plan ahead and run this command overnight, if possible.**
 
-## Building https://dg.localdomain Using DG-FEDORA
-See [Compact Build of dg.localdomain - Concise Instructions](https://static.grinnell.edu/blogs/McFateM/posts/094-compact-build-of-dg.localdomain/) for complete details.
-
-## Not Using Mac OS X?  
+## Not Using Mac OS X?
 If your workstation is not a Mac, you will need to insert the USB stick and take appropriate steps to:
 
   - Mount the stick with read/write permissions as _/Volumes/DG-NAME_.
@@ -97,6 +99,6 @@ Once the previous rebuild process is complete, you should rebuild your _Solr_ se
 This rebuilding process may take a few minutes.  Proceed to the check your work after some minutes have passed.
 
 ### Check Your Work
-  - Visit the repository home page at https://isle.localdomain/islandora/object/islandora:root (demo) or https://dg.localdomain/islandora/object/islandora:root (local).  You should see new collections on the first page of your display.  
+  - Visit the repository home page at https://isle.localdomain/islandora/object/islandora:root (demo) or https://dg.localdomain/islandora/object/islandora:root (local).  You should see new collections on the first page of your display.
   - Follow the install documentation for enabling the _Islandora Simple Search_ block and test _Solr_ by searching for a term like "Ley".
 -->
