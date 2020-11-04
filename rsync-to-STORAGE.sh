@@ -42,6 +42,7 @@ rsync -azrui \
   --exclude ".Spotlight-V100" \
   --exclude ".Trashes" \
   --exclude ".TemporaryItems" \
+  --exclude "*.gz" \
   ${VOLUME}/. ${DEST}/. \
   --progress \
   --log-file=${DEST}/logs/${LOG}
