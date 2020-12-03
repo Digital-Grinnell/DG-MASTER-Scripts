@@ -33,7 +33,7 @@ echo ""
 
 echo ${ATTENTION}
 echo "The next command will open a terminal inside your running MySQL container. Copy and paste the following into that terminal prompt: ${NORMAL}"
-echo "  mysql -u root -p digital_grinnell < export.sql; mysql -u root -p digital_grinnell -e 'show tables;'; exit; "
+echo "  mysql -u root -p digital_grinnell < prod-export.sql; mysql -u root -p digital_grinnell -e 'show tables;'; exit; "
 echo ""
 echo ${ATTENTION}
 echo "When prompted for a password, be sure to use the dg.localdomain MySQL password found in LastPass. Ultimately you should see a long list of table names dumped from your database. The list should end with 'xmlsitemap_sitemap'. "

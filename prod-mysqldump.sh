@@ -1,7 +1,8 @@
 # prod-mysqldump.sh
 #
-mysqldump -u admin -p --no-data digital_grinnell > prod-export.sql
-mysqldump -u admin -p --no-create-info --ignore-table=digital_grinnell.accesslog \
+mysqldump -u root -p --no-data digital_grinnell > prod-export.sql
+#
+mysqldump -u root -p --no-create-info --ignore-table=digital_grinnell.accesslog \
   --ignore-table=digital_grinnell.batch --ignore-table=digital_grinnell.batch_log \
   --ignore-table=digital_grinnell.batch_log_revision --ignore-table=digital_grinnell.cache \
   --ignore-table=digital_grinnell.cache_admin_menu --ignore-table=digital_grinnell.cache_block \
