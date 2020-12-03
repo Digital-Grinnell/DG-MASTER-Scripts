@@ -46,10 +46,10 @@ else
   echo "ERROR: The Digital-Grinnell/dg-isle repository could not be cloned. See ${VOLUME}/reset-keychain-access.md for guidance and/or contact digital@grinnell.edu for necessary credentials."; exit $ERRORCODE;
 fi
 
-# change all /Volumes/DG-FEDORA paths in ~/ISLE/dg-isle/docker-compose.DG-LOCAL.yml to ${VOLUME}
+# change all /Volumes/DG-*/ paths in ~/ISLE/dg-isle/docker-compose.DG-LOCAL.yml to ${VOLUME}
 echo ${STATUS}
-echo "Using 'sed' to redirect /Volumes/DG-FEDORA references to this USB stick... ${NORMAL}"
-sed -i.backup "s+/Volumes/DG-FEDORA+${VOLUME}+" ~/ISLE/dg-isle/docker-compose.DG-LOCAL.yml
+echo "Using 'sed' to redirect /Volumes/DG-<something>/ references to this USB stick... ${NORMAL}"
+sed -i.backup "s|/Volumes/DG-.+/|${VOLUME}/|" ~/ISLE/dg-isle/docker-compose.DG-LOCAL.yml
 
 git clone --recursive https://github.com/Digital-Grinnell/dg-islandora
 if [ $? -eq 0 ]; then
