@@ -26,14 +26,14 @@ fi
 
 echo ${STATUS}
 echo "Copying a previously captured Drupal site database to your MySQL container... ${NORMAL}"
-docker cp ${VOLUME}/Extras/local_drupal_site_101620.sql  isle-mysql-ld:/site.sql
+docker cp ${VOLUME}/Extras/export.sql  isle-mysql-ld:/export.sql
 echo ${GOOD}
 echo "Copy is complete.  Moving on... ${NORMAL}"
 echo ""
 
 echo ${ATTENTION}
 echo "The next command will open a terminal inside your running MySQL container. Copy and paste the following into that terminal prompt: ${NORMAL}"
-echo "  mysql -u root -p digital_grinnell < site.sql; mysql -u root -p digital_grinnell -e 'show tables;'; exit; "
+echo "  mysql -u root -p digital_grinnell < export.sql; mysql -u root -p digital_grinnell -e 'show tables;'; exit; "
 echo ""
 echo ${ATTENTION}
 echo "When prompted for a password, be sure to use the dg.localdomain MySQL password found in LastPass. Ultimately you should see a long list of table names dumped from your database. The list should end with 'xmlsitemap_sitemap'. "
