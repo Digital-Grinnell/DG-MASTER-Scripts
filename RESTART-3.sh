@@ -26,7 +26,7 @@ fi
 
 echo ${STATUS}
 echo "Copying a previously captured Drupal site database to your MySQL container... ${NORMAL}"
-docker cp ${VOLUME}/Extras/export.sql  isle-mysql-ld:/export.sql
+docker cp ${VOLUME}/Extras/prod-export.sql  isle-mysql-ld:/prod-export.sql
 echo ${GOOD}
 echo "Copy is complete.  Moving on... ${NORMAL}"
 echo ""
