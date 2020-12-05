@@ -27,7 +27,7 @@ echo ${STATUS}
 echo "Resetting the local Docker environment... ${NORMAL}"
 docker stop $(docker ps -q)
 docker rm -v $(docker ps -qa)
-# docker image rm $(docker image ls -q) --force
+docker image rm $(docker image ls -q) --force
 docker system prune --force
 
 echo ${STATUS}
