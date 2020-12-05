@@ -25,6 +25,8 @@ echo ".log file is: ${LOG}"
 
 echo "Starting rsync now..."
 rsync -azrui \
+  --exclude ".DS_Store" \
+  --exclude ".fseventsd" \
   ${VOLUME}/. /Volumes/DG-CLONE/. \
   --progress \
   --log-file=/Volumes/DG-CLONE/logs/${LOG}
