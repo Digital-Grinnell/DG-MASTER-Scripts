@@ -1,5 +1,8 @@
 # prod-mysqldump.sh
 #
+# From DGDocker1 shell into the isle-mysql-dg container and...
+docker exec -it isle-mysql-dg #!/usr/bin/env bash
+#
 mysqldump -u root -p --no-data digital_grinnell > prod-export.sql
 #
 mysqldump -u root -p --no-create-info --ignore-table=digital_grinnell.accesslog \
@@ -15,3 +18,8 @@ mysqldump -u root -p --no-create-info --ignore-table=digital_grinnell.accesslog 
   --ignore-table=digital_grinnell.cache_update --ignore-table=digital_grinnell.cache_views \
   --ignore-table=digital_grinnell.cache_views_data --ignore-table=digital_grinnell.watchdog \
   digital_grinnell >> prod-export.sql
+#
+# Once the dump is complete, return to the host...
+exit
+# ...and copy the .sql backup to /mnt/mcfatem/DG-MASTER/Backup-Data/prod-export.sql like so:
+sudo docker cp isle-mysql-dg:/prod-export.sql /mnt/mcfatem/DG-MASTER/Backup-Data/prod-export.sql
